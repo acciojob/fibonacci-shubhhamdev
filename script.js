@@ -15,6 +15,7 @@ function fibonacci(num) {
     }
 
     return fibCurr;
+	  console.log(fibonacci(num));
   }
 }
 
