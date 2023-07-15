@@ -12,6 +12,6 @@ function fibonacciSeries(num) {
   }
 }
 
-const n = 10;
+const n = 50;
 const series = fibonacciSeries(n);
 console.log(`${series}`);
