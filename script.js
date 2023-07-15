@@ -1,23 +1,17 @@
-function fibonacci(num) {
-  if (num === 0) {
-    return 0;
+function fibonacciSeries(num) {
+  if (num <= 0) {
+    return [];
   } else if (num === 1) {
-    return 1;
+    return [0];
   } else {
-    let fibPrev = 0;
-    let fibCurr = 1;
-    let fibNext;
-
-    for (let i = 2; i <= num; i++) {
-      fibNext = fibPrev + fibCurr;
-      fibPrev = fibCurr;
-      fibCurr = fibNext;
+    let fib = [0, 1];
+    for (let i = 2; i < num; i++) {
+      fib[i] = fib[i - 1] + fib[i - 2];
     }
-
-    return fibCurr;
-	  console.log(fibonacci(num));
+    return fib;
   }
 }
 
-
-module.exports = fibonacci;
+const n = 10;
+const series = fibonacciSeries(n);
+console.log(`${series}`);
